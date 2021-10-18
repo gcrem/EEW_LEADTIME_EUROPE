@@ -15,6 +15,9 @@ function idx_pop_intensity_leadtime = fn_relative_feasibility_index(population,i
 % w_intensity - 1x1 double corresponding to w_I in equation 3 of referenced paper
 % w_leadtime - 1x1 double corresponding to w_L in equation 3 of referenced paper
 
+% Outputs:
+% relative_feasibility_index - mx1 double of relative feasibility indices
+
 for i=1:length(population)
 prctile_pop(i) = sum(population<=population(i))./length(population);
 prctile_intensity(i) = sum(intensity<=intensity(i))./length(intensity);
